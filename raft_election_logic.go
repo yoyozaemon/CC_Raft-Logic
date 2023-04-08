@@ -122,4 +122,11 @@ func (this *RaftNode) becomeFollower(term int) {
 	//-------------------------------------------------------------------------------------------/
 	// TODO
 	//-------------------------------------------------------------------------------------------/
+	this.state = "Follower"
+	this.currentTerm = term
+	this.votedFor = -1
+	this.lastElectionTimerStartedTime = time.Now()
+
+	// Run an election timer as a follower
+	go this.startElectionTimer()
 }
