@@ -1,2 +1,1 @@
-# CC_Team_5_Raft-Logic
-Implementing Raft Logic in Go
+# UE20CS351-Cloud-Computing-Problem-Statements
