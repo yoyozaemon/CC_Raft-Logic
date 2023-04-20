@@ -107,6 +107,8 @@ func (this *RaftNode) broadcastHeartbeats() {
 						// IMPLEMENT THE UPDATE LOGIC FOR THIS.
 						//-------------------------------------------------------------------------------------------/
 						// TODO
+						this.nextIndex[peerId] = currentPeer_nextIndex + len(entries)
+						this.matchIndex[peerId] = this.nextIndex[peerId] - 1
 						//-------------------------------------------------------------------------------------------/
 
 						if (aeType == "Heartbeat" && LogHeartbeatMessages) || aeType == "AppendEntries" {
@@ -125,12 +127,17 @@ func (this *RaftNode) broadcastHeartbeats() {
 								matchCount := 1 // Leader itself
 
 								for _, peerId := range this.peersIds {
-									if { // TODO  // When should you update matchCount?
+									//if { // TODO  // When should you update matchCount?
+									//matchCount++
+									//}
+									if this.matchIndex[peerId] >= i {
 										matchCount++
 									}
 								}
-
-								if { // TODO  // When should you update commitIndex to i?
+								//if { // TODO  // When should you update commitIndex to i?
+								//this.commitIndex = i
+								//}
+								if matchCount > len(this.peersIds)/2 { // TODO  // When should you update commitIndex to i?
 									this.commitIndex = i
 								}
 							}
@@ -151,6 +158,7 @@ func (this *RaftNode) broadcastHeartbeats() {
 
 						//-------------------------------------------------------------------------------------------/
 						// TODO
+						this.nextIndex[peerId]--
 						//-------------------------------------------------------------------------------------------/
 
 						if (aeType == "Heartbeat" && LogHeartbeatMessages) || aeType == "AppendEntries" {
