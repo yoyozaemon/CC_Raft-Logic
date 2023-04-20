@@ -1,6 +1,16 @@
 CLOUD COMPUTING - UE20CS351
 
-# Project: Implementing Raft Logic in Go
+# Project: Implementing Raft Logic in Go  
+
+
+## **Team Members:**
+| **Name**              | **SRN**       |
+| -----------------| -----------------|
+| Chandan Kumar S  | PES2UG20CS804    |
+| Chinmay Gowda     | PES2UG20CS902  |
+| Vijay J           | PES2UG20CS815    |
+| Yuvaraj S         | PES2UG20CS819    |
+
 
 ## **In this project, you will:**
 
