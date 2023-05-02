@@ -89,6 +89,4 @@ You could also instead tail -f the files with tmux, like you did for Experiment 
 For evaluation, you will need to walk through the output you got from the Tests 1 and 2 and explain why it's expected behaviour. You will also need to then execute test-cases given to you later and do the same. **(Test 3 given to you will fail by default; it's your job to explain why and how to fix it.) (refer to the last paragraph of 'how you should start')**
 
 
-## **For queries, contact:**
-
-**RR Campus:** [**tacloudcomputing@gmail.com**](mailto:tacloudcomputing@gmail.com)
+> CC Project 2023
