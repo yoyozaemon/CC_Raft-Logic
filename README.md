@@ -1,5 +1,7 @@
 CLOUD COMPUTING - UE20CS351
 
+[![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/gomods/athens.svg)](https://github.com/gomods/athens)
+
 # Project: Implementing Raft Logic in Go  
 
 
